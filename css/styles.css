@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(180deg, #0a0b0d 0%, #1a1b1d 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+}
+
+/* 顶部导航区域 */
+.header-area {
+    background: #0a0b0d;
+    padding: 40px 0;
+    min-height: 40vh;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #a6aab5;
+    font-size: 14px;
+}
+
+.nav-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nav-section a {
+    color: #a6aab5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-section a:hover {
+    color: #f5f9fe;
+}
+
+/* TRAE Logo 区域 */
+.claude-container {
+    background: linear-gradient(135deg, #32f08c 0%, #3ee1a3 50%, #60f2bd 100%);
+    width: 100vw;
+    height: 400px;
+    max-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.trae-logo {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 20rem;
+    font-weight: 900;
+    color: #0a0b0d;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+/* 使用SVG实现变形效果 */
+.trae-svg {
+    width: 100%;
+    max-width: 800px;
+    height: 300px;
+    cursor: pointer;
+}
+
+.trae-text {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 120px;
+    font-weight: 900;
+    fill: #0a0b0d;
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Canvas版本 */
+.canvas-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#distortionCanvas {
+    width: 1920px;
+    height: 470px;
+    cursor: pointer;
+    display: block;
+}
+
+/* 底部信息 */
+.footer-info {
+    background: #0a0b0d;
+    padding: 40px;
+    color: #666;
+    font-size: 12px;
+}
+
+.company-info {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.qr-code {
+    width: 80px;
+    height: 80px;
+    background: #333;
+    border-radius: 8px;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .trae-logo {
+        font-size: 8rem;
+    }
+
+    .trae-text {
+        font-size: 80px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .nav-section {
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .trae-logo {
+        font-size: 6rem;
+    }
+
+    .trae-text {
+        font-size: 60px;
+    }
+}
